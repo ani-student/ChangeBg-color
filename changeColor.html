@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    div {
+        width: 600px;
+        margin: auto;
+        height: 300px;
+        border: 2px solid black;
+    }
+
+    #btn {
+        padding: 10px 40px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <h1><span></span> Color</h1>
+    <button id="btn" onclick="genrateBtn()">click</button>
+    <div> </div>
+
+
+
+    <script>
+        function genrateBtn() {
+            let red = Math.floor(Math.random() * 255);
+            let green = Math.floor(Math.random() * 255)
+            let blue = Math.floor(Math.random() * 255);
+            let div = document.querySelector("div")
+            let h1 = document.querySelector("h1 span")
+            let color = `rgb(${red},${green},${blue})`
+            h1.innerText = color;
+            div.style.background = color
+        }
+    </script>
+</body>
+
+</html>
